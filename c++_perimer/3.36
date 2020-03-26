@@ -1,4 +1,12 @@
-    //3.36
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <vector>
+int main() {
+    using namespace std;
+    //3.36 for array
     int arr1[5] = {1,2,3,4,5};
     int arr2[5] = {1,2,3,4,5};
     //int arr2[10] = {0,2,3,4,5};
@@ -14,6 +22,33 @@
     int i = 1;
 
     for(int *p1 = begin(arr1); p1 != end(arr1); p1++)
+    {
+        if(*p1 == *p2)
+        {
+            cout << i << "th element is the same!" << endl;
+        }
+        else
+            cout << i << "th element is not the same!" << endl;
+        p2++;
+        i++;
+    }
+
+
+    //3.36 for vecotr
+    vector<int> v1 {1,2,3,4,5};
+    vector<int> v2 {1,2,3,4,5};
+    //vector<int> v2 {0,2,3,4,5};
+
+    for(auto num : v1)
+        cout << num << " ";
+    cout << endl;
+    for(auto num :v2)
+        cout << num << " ";
+    cout << endl;
+
+    int i = 1;
+    auto p2 = v2.cbegin();
+    for(auto p1 = v1.cbegin(); p1 != v1.cend(); p1++)
     {
         if(*p1 == *p2)
         {
