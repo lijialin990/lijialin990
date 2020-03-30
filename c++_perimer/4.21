@@ -1,0 +1,6 @@
+    vector<int> vInt{1, 2, 3, 4, 5};
+    for(auto i : vInt)
+    {
+        i = (i % 2 == 0) ? i * 2 : i ;
+        cout << i << "\t";
+    }
