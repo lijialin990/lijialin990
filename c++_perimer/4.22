@@ -1,0 +1,4 @@
+    int grade = 74;
+    string finalgrade = (grade >= 90) ? "high pass" : (grade >= 75) ? "pass" : (grade > 59) ? "low pass" : "fail";
+    cout << finalgrade;
+    return 0;
