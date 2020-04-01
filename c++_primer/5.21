@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <vector>
+int main() {
+    using namespace std;
+
+    string preStr = " ";
+    string curStr;
+    bool b = true;
+
+    cout << "Please input a string: ";
+    while (cin >> curStr)
+    {
+        if(!isupper(curStr[0]))
+            continue;
+        if(curStr == preStr)
+        {
+            b = false;
+            cout << "The repeating word is：" << curStr << endl;
+            break;
+        }
+
+        preStr = curStr;
+    }
+    if(b)
+    {
+        cout << "There is no repeating words inside of the string." << endl;
+    }
+
+    return 0;
+}
