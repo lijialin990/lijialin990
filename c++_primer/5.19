@@ -1,0 +1,22 @@
+int main() {
+    using namespace std;
+    string str1, str2, chioce;
+
+    do{
+        cout << "Please input two string: ";
+        cin >> str1 >> str2;
+        if(str1.size() < str2.size())
+        {
+            cout << "The first string is shorter than the second.";
+        } else{
+            cout << "the first string is longer than the second.";
+        }
+        cout << endl;
+        cout << "Do you want to continue? y or n: ";
+        cin >> chioce;
+    }while (chioce == "y");
+    
+    cout << "thanks for using." << endl;
+    
+    return 0;
+    }
