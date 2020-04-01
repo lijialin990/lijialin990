@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <vector>
+int main() {
+    using namespace std;
+    string preStr = " ";
+    string curStr;
+    string maxStr;
+    int maxCnt = 1;
+    int Cnt = 1;
+
+    while(cin >> curStr)
+    {
+        if(curStr == "stop")
+            break;
+        else
+        {
+            if(curStr == preStr)
+            {
+                ++Cnt;
+                if(Cnt > maxCnt)
+                {
+                    maxCnt = Cnt;
+                    maxStr = curStr;
+                }
+            } else
+            {
+                Cnt = 1;
+                preStr = curStr;
+            }
+
+        }
+    }
+
+    cout << "The most word is: " << maxStr << endl;
+    cout << "It show " << maxCnt << " times." << endl;
+
+
+    return 0;
+}
