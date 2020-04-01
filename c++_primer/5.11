@@ -1,0 +1,50 @@
+    int aCnt = 0; int eCnt = 0; int iCnt = 0; int oCnt = 0; int uCnt = 0;
+    int otherCnt = 0; int tabCnt = 0; int spaceCnt = 0; int newlineCnt = 0;
+
+    char ch;
+    cout << "Please input: " << endl;
+    while(cin.get(ch))
+    {
+        if(ch == '0')
+            break;
+        switch(ch)
+        {
+            case 'a':
+            case 'A':
+                ++aCnt;
+                break;
+            case 'i':
+            case 'I':
+                ++iCnt;
+                break;
+            case 'o':
+            case 'O':
+                ++oCnt;
+                break;
+            case 'u':
+            case 'U':
+                ++uCnt;
+                break;
+            case ' ':
+                ++spaceCnt;
+                break;
+            case '\t':
+                ++tabCnt;
+                break;
+            case '\n':
+                ++newlineCnt;
+                break;
+            default:
+                ++otherCnt;
+        }
+
+    }
+    cout << "A and a: " << aCnt << endl;
+    cout << "E and e: " << eCnt << endl;
+    cout << "I and i: " << iCnt << endl;
+    cout << "O and o: " << oCnt << endl;
+    cout << "U and u: " << uCnt << endl;
+    cout << "space: " << spaceCnt << endl;
+    cout << "tab: " << tabCnt << endl;
+    cout << "newline: " << newlineCnt << endl;
+    cout << "other: " << otherCnt << endl;
