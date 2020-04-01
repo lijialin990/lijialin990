@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <vector>
+int main() {
+    using namespace std;
+
+    vector<int> vec1{1, 2, 3};
+    vector<int> vec2{1, 2, 3, 4, 5};
+    int output = -1;
+
+    if (vec1.size() > vec2.size())
+    {
+        for (auto i = vec1.cbegin(), j = vec2.cbegin(); j != vec2.cend(); j++, i++)
+        {
+            if(*i == *j)
+            {
+                output = 1;
+            } else
+            {
+                output = 0;
+                break;
+            }
+        }
+    } else
+    {
+        for (auto i = vec1.cbegin(), j = vec2.cbegin(); i != vec1.cend(); j++, i++)
+        {
+            if(*i == *j)
+            {
+                output = 1;
+            } else
+            {
+                output = 0;
+                break;
+            }
+        }
+    }
+
+    cout << output << endl;
+
+
+    return 0;
+    }
