@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <cstdlib>
+#include <algorithm>
+#include <cstring>
+
+int fact(int a)
+{
+    int res = 1;
+    for(int i = a; i != 0; --i)
+    {
+        res *= i;
+    }
+    return res;
+}
+
+int main(){
+    using namespace std;
+    int val = 0;
+    cout << "Please input a value: ";
+    cin >> val;
+    int valFact = fact(val);
+    cout << "The factorial of " << val << " is: " << valFact;
+
+
+
+    return 0;
+}
