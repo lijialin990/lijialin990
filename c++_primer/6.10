@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <cstdlib>
+#include <algorithm>
+#include <cstring>
+#include "Chapter6.h"
+
+using namespace std;
+
+int main(){
+
+    int val1;
+    int val2;
+    int* valPtr1, *valPtr2;
+    cout << "Please input two values: ";
+    cin >> val1 >> val2;
+    valPtr1 = &val1;
+    valPtr2 = &val2;
+    exchange(valPtr1, valPtr2);
+    cout << *valPtr1 <<  " " << *valPtr2 << endl;
+
+
+
+    return 0;
+}
+
+
+void exchange(int* p1, int* p2)
+{
+    int temp;
+    temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+}
