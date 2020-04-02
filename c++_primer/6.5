@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <cstdlib>
+#include <algorithm>
+#include <cstring>
+
+int abs(int a)
+{
+    int res = -1;
+    if(a < 0)
+        res = -1 * a;
+    else
+        res = a;
+    return res;
+}
+
+int main(){
+    using namespace std;
+    int val = 0;
+    cout << "Please input a value: ";
+    cin >> val;
+    int valFact = abs(val);
+    cout << "The absolute of " << val << " is: " << valFact;
+
+
+
+    return 0;
+}
